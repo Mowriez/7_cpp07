@@ -12,8 +12,52 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "../inc/iter.hpp"
 
+std::string	sendPoemsPls(size_t i) {
+	std::string retString = "In the realm of C++, where code finds its way,\n"
+							"A template whispers, in the light of day.\n"
+							"A vessel of patterns, a blueprint so fine,\n"
+							"A dance of types, in a language design.\n"
+							"In angle brackets, a promise unfolds,\n"
+							"A template's tale, as the story's told.\n"
+							"Generics abound, in a versatile trance,\n"
+							"A template's magic, in the coder's dance.\n"
+							"From classes to functions, it weaves its art,\n"
+							"A flexible charm, where logic departs.\n"
+							"A parametric dream, where types align,\n"
+							"In the template's embrace, all codes entwine.\n";
+	if (i <= retString.length())
+		std::cout << retString.substr(0, i) << std::endl << std::endl;
+	else
+		std::cout << retString << std::endl << std::endl;
+	return ("test");
+}
+
+void	capitalize(std::string &input) {
+	std::string	output = input;
+	for (size_t i = 0; i < output.length(); i++)
+		output[i] = toupper(output[i]);
+	std::cout << output << std::endl;
+}
+
+
+
 int main(void) {
-	std::cout << "Test" << std::endl;
+	std::cout << "---Arr type: size_t, function type std::string---" << std::endl;
+	size_t	sizeTArr[6] = {1, 15, 26, 10, 2000, 5};
+	iter(sizeTArr, 6, sendPoemsPls);
+
+	std::cout << "---Arr type: std::string, function type: void---" << std::endl;
+	std::string stringArr[4] = {"test", "another test", "q231asdasf",
+							"more different test"};
+	iter(stringArr, 4, capitalize);
+
+	std::cout << "---Arr type: double, function type: void---" << std::endl;
+	double	doubleArr[3] = {1.2, 3.4, 5.6};
+	float	floatArr[3] = {1.2f, 3.4f, 5.6f};
+	iter(doubleArr, 3, printElement<double>);
+	iter(floatArr, 3, printElement<float>);
+
 }
