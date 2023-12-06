@@ -6,7 +6,7 @@
 #    By: mtrautne <mtrautne@student.42wolfsburg.d>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 15:59:30 by mtrautne          #+#    #+#              #
-#    Updated: 2023/12/05 17:46:01 by mtrautne         ###   ########.fr        #
+#    Updated: 2023/12/05 13:28:43 by mtrautne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CXX = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
 
-NAME = executable
+NAME = ex01
 
 INC_DIR =	./inc
 SRC_DIR =	./src
