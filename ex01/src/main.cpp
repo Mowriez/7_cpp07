@@ -46,18 +46,17 @@ void	capitalize(std::string &input) {
 
 int main(void) {
 	std::cout << "---Arr type: size_t, function type std::string---" << std::endl;
-	size_t	sizeTArr[6] = {1, 15, 26, 10, 2000, 5};
-	iter(sizeTArr, 6, sendPoemsPls);
+	size_t	sizeTArr[7] = {1, 15, 26, 10, 2000, 5, 0};
+	iter(sizeTArr, sizeof(sizeTArr) / sizeof(size_t), sendPoemsPls);
 
 	std::cout << "---Arr type: std::string, function type: void---" << std::endl;
 	std::string stringArr[4] = {"test", "another test", "q231asdasf",
 							"more different test"};
-	iter(stringArr, 4, capitalize);
+	iter(stringArr, sizeof(stringArr) / sizeof(std::string), capitalize);
 
 	std::cout << "---Arr type: double, function type: void---" << std::endl;
 	double	doubleArr[3] = {1.2, 3.4, 5.6};
 	float	floatArr[3] = {1.2f, 3.4f, 5.6f};
-	iter(doubleArr, 3, printElement<double>);
-	iter(floatArr, 3, printElement<float>);
-
+	iter(doubleArr, sizeof(doubleArr) / sizeof(double), printElement<double>);
+	iter(floatArr, sizeof(floatArr) / sizeof(float), printElement<float>);
 }
