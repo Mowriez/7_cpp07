@@ -22,7 +22,7 @@ OBJ_DIR =	./obj
 
 CPPFILES =	main
 
-HEADER =
+HEADER = Array
 
 INCL =	$(addsuffix .hpp, $(addprefix $(INC_DIR)/, $(HEADER)))
 SRCS = 	$(addsuffix .cpp, $(addprefix $(SRC_DIR)/, $(CPPFILES)))
